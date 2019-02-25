@@ -1,6 +1,10 @@
 <mat-toolbar class="toolbar">
-  <span>NHL Stats</span>
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <span class="title">NHL Stats</span>
+  <button class="menu-btn" mat-button [matMenuTriggerFor]="menu">
+    <i class="material-icons">
+      menu
+    </i>
+  </button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="/teams">Teams</button>
     <button mat-menu-item routerLink="/results">Results</button>

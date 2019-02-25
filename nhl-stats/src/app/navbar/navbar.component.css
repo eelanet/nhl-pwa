@@ -1,0 +1,14 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  background: #c1ae7c;
+}
+
+.title {
+  width: 80%;
+  font-size: 20px;
+}
+
+.menu-btn {
+  width: 20%;
+}

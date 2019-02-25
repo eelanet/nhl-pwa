@@ -3,42 +3,44 @@
 }
 
 .container {
-  width: 95%;
-  margin: auto;
+  width: 100%;
+  padding: 10px;
   text-align: center;
-  border: solid 2px salmon;
 }
 
 .date {
+  text-align: left;
   margin: 10px;
 }
 
 .titles {
+  background: #ddd2b7;
 }
 
 .title {
   display: inline-block;
   width: 33%;
-  border: solid 2px gold;
   font-size: 12px;
 }
 
 .results {
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .games-container {
-  border: solid 2px lightblue;
-  width: 99%;
+  width: 100%;
 }
 
 .game {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 95%;
   margin: 0 auto 10px auto;
-  border-bottom: solid 2px gold;
+  border-bottom: solid 2px #ddd2b7;
 }
 
 .section {
@@ -48,7 +50,11 @@
   width: 33%;
   display: flex;
   justify-content: space-around;
-  font-size: 14;
+  align-items: center;
+  font-size: 18px;
+}
+
+.team-score {
   font-weight: 600;
 }
 
