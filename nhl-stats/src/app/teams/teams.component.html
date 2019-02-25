@@ -1,7 +1,6 @@
-<h1>{{ title }}</h1>
-
-<div>
-  <ul>
-    <li *ngFor="let name of teamNames">{{ name }}</li>
-  </ul>
+<div class="container">
+  <h2 class="title">NHL Teams 2019</h2>
+  <div class="teams">
+    <p class="team" *ngFor="let name of teamNames">{{ name }}</p>
+  </div>
 </div>
