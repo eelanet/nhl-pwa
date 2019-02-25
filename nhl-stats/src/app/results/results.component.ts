@@ -9,11 +9,12 @@ import { StatsService } from "../stats.service";
 })
 export class ResultsComponent implements OnInit {
   games: any;
+  gamesToday = 0;
   date = "";
   dates;
   results;
-  awayTeamName = [];
-  homeTeamName = [];
+  awayTeams = [];
+  homeTeams = [];
 
   constructor(private stats: StatsService) {}
 
@@ -30,14 +31,15 @@ export class ResultsComponent implements OnInit {
 
   showDate() {
     this.dates = this.games.dates[0];
-    this.date = this.games.dates[0].date;
+    this.date = this.dates.date;
+    this.gamesToday = this.games.totalItems;
     this.showResults();
   }
 
   showResults() {
     this.dates.games.forEach(element => {
-      this.awayTeamName.push(element.teams.away.team.name);
-      this.homeTeamName.push(element.teams.home.team.name);
+      // this.awayTeams.push(element.teams.away);
+      this.homeTeams.push(element.teams);
     });
   }
 }

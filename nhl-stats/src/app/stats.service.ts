@@ -12,6 +12,8 @@ export class StatsService {
   }
 
   getResults() {
-    return this.http.get("https://statsapi.web.nhl.com/api/v1/schedule");
+    return this.http.get(
+      "https://statsapi.web.nhl.com/api/v1/schedule?date=2019-02-24"
+    );
   }
 }

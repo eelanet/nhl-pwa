@@ -1,17 +1,32 @@
 <div class="container">
-  <p>
-    {{ date }}
-  </p>
-  <div>
-    <h2>Home Teams</h2>
-    <ul>
-      <li *ngFor="let homeName of homeTeamName">{{ homeName }}</li>
-    </ul>
+  <div class="date">
+    <span class="games-amount">{{ gamesToday }}</span>
+    <span> games on {{ date }}</span>
   </div>
-  <div>
-    <h2>Away Teams</h2>
-    <ul>
-      <li *ngFor="let awayName of awayTeamName">{{ awayName }}</li>
-    </ul>
+
+  <div class="titles">
+    <span class="title">
+      <h2 class="home-title">Home</h2>
+    </span>
+    <span class="title">
+      <h2 class="score-title">Score</h2>
+    </span>
+    <span class="title">
+      <h2 class="away-title">Away</h2>
+    </span>
+  </div>
+
+  <div class="results">
+    <div class="games-container">
+      <div class="game" *ngFor="let team of homeTeams">
+        <p class="section team-name">{{ team.home.team.name }}</p>
+        <div class="score">
+          <p class="section team-score">{{ team.home.score }}</p>
+          <p class="section">-</p>
+          <p class="section team-score">{{ team.away.score }}</p>
+        </div>
+        <p class="section team-name">{{ team.away.team.name }}</p>
+      </div>
+    </div>
   </div>
 </div>

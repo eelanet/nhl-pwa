@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  border: solid 2px salmon;
+}
+
+.date {
+  margin: 10px;
+}
+
+.titles {
+}
+
+.title {
+  display: inline-block;
+  width: 33%;
+  border: solid 2px gold;
+  font-size: 12px;
+}
+
+.results {
+  display: flex;
+  justify-content: center;
+}
+
+.games-container {
+  border: solid 2px lightblue;
+  width: 99%;
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto 10px auto;
+  border-bottom: solid 2px gold;
+}
+
+.section {
+}
+
+.score {
+  width: 33%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14;
+  font-weight: 600;
+}
+
+.team-name {
+  width: 33%;
+}
