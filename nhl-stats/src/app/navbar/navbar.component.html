@@ -2,7 +2,8 @@
   <span>NHL Stats</span>
   <button mat-button [matMenuTriggerFor]="menu">Menu</button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>Teams</button>
-    <button mat-menu-item>Results</button>
+    <button mat-menu-item routerLink="/teams">Teams</button>
+    <button mat-menu-item routerLink="/results">Results</button>
+    <button mat-menu-item routerLink="/table">Table</button>
   </mat-menu>
 </mat-toolbar>

@@ -1,3 +1,17 @@
-<p>
-  results works!
-</p>
+<div class="container">
+  <p>
+    {{ date }}
+  </p>
+  <div>
+    <h2>Home Teams</h2>
+    <ul>
+      <li *ngFor="let homeName of homeTeamName">{{ homeName }}</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Away Teams</h2>
+    <ul>
+      <li *ngFor="let awayName of awayTeamName">{{ awayName }}</li>
+    </ul>
+  </div>
+</div>

@@ -8,7 +8,7 @@ import { StatsService } from "../stats.service";
   styleUrls: ["./teams.component.css"]
 })
 export class TeamsComponent implements OnInit {
-  title = "NHL live stats";
+  title = "All teams";
   update = false;
   allTeams: any;
   teamNames = [];

@@ -18,9 +18,11 @@ import {
 import { NavbarComponent } from "./navbar/navbar.component";
 import { TeamsComponent } from './teams/teams.component';
 import { ResultsComponent } from './results/results.component';
+import { GamesComponent } from './games/games.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, TeamsComponent, ResultsComponent],
+  declarations: [AppComponent, NavbarComponent, TeamsComponent, ResultsComponent, GamesComponent, TableComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

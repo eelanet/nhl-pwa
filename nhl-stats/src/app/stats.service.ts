@@ -10,4 +10,8 @@ export class StatsService {
   getTeams() {
     return this.http.get("https://statsapi.web.nhl.com/api/v1/teams");
   }
+
+  getResults() {
+    return this.http.get("https://statsapi.web.nhl.com/api/v1/schedule");
+  }
 }
