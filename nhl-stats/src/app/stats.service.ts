@@ -1,9 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class StatsService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  getTeams() {
+    return this.http.get("https://statsapi.web.nhl.com/api/v1/teams");
+  }
 }
