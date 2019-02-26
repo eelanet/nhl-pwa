@@ -8,7 +8,6 @@ import { StatsService } from "../stats.service";
 })
 export class TableComponent implements OnInit {
   league;
-  number = 0;
   names = [];
   ranks = [];
   points = [];
@@ -31,9 +30,6 @@ export class TableComponent implements OnInit {
     this.league.records.forEach(element => {
       element.teamRecords.forEach(element => {
         this.teams.push(element);
-        this.teams.forEach(element => {
-          element.team.rank = this.number++;
-        });
       });
     });
     this.sortByRank();
@@ -43,9 +39,11 @@ export class TableComponent implements OnInit {
     this.teams.forEach(element => {
       this.ranks.push(element.leagueRank);
     });
+    // Sorts ranks array from 1 to 31
     this.ranks = this.ranks.sort((a, b) => a - b);
     this.ranks.forEach(rank => {
       this.teams.forEach(element => {
+        // If rank is teams league rank -> update names and points array
         if (element.leagueRank === rank) {
           this.names.push(element.team.name);
           this.points.push(element.points);

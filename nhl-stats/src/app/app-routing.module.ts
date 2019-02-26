@@ -5,7 +5,7 @@ import { ResultsComponent } from "./results/results.component";
 import { TableComponent } from "./table/table.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "/table", pathMatch: "full" },
+  { path: "", redirectTo: "/teams", pathMatch: "full" },
   { path: "teams", component: TeamsComponent },
   { path: "results", component: ResultsComponent },
   { path: "table", component: TableComponent }

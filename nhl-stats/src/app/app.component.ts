@@ -9,8 +9,9 @@ import { SwUpdate } from "@angular/service-worker";
 export class AppComponent {
   update = false;
 
+  // Reloads page automatically if updates available
   constructor(updates: SwUpdate) {
-    updates.available.subscribe(event => {
+    updates.available.subscribe(() => {
       this.update = true;
       updates.activateUpdate().then(() => document.location.reload());
     });
