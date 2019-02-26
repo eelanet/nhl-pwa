@@ -10,8 +10,8 @@ import { StatsService } from "../stats.service";
 export class ResultsComponent implements OnInit {
   games: any;
   games2: any;
+  gamesTomorrow = 0;
   gamesToday = 0;
-  gamesYesterday = 0;
   date = "";
   date2 = "";
   dates;
@@ -21,61 +21,71 @@ export class ResultsComponent implements OnInit {
   teams = [];
   teams2 = [];
   today;
-  yesterday;
+  tomorrow;
 
   constructor(private stats: StatsService) {}
 
   ngOnInit() {
+    this.getTomorrow();
     this.getToday();
-    this.getYesterday();
+    this.getResultsTomorrow();
     this.getResultsToday();
-    this.getResultsYesterday();
+  }
+
+  getTomorrow() {
+    const date = new Date();
+    const dd = date.getDate();
+    const mm = date.getMonth() + 1; //January is 0!
+    const yyyy = date.getFullYear();
+    const tomorrow = yyyy + "-" + mm + "-" + dd;
+    this.tomorrow = tomorrow;
   }
 
   getToday() {
     const date = new Date();
-    const dd = date.getDate();
+    const dd = date.getDate() - 1;
     const mm = date.getMonth() + 1; //January is 0!
     const yyyy = date.getFullYear();
     const today = yyyy + "-" + mm + "-" + dd;
     this.today = today;
   }
 
-  getYesterday() {
-    const date = new Date();
-    const dd = date.getDate() - 1;
-    const mm = date.getMonth() + 1; //January is 0!
-    const yyyy = date.getFullYear();
-    const yesterday = yyyy + "-" + mm + "-" + dd;
-    this.yesterday = yesterday;
-  }
-
-  getResultsToday() {
-    this.stats.getResults(this.today).subscribe(res => {
+  getResultsTomorrow() {
+    this.stats.getResults(this.tomorrow).subscribe(res => {
       this.games = res;
       this.showDate();
     });
   }
 
-  getResultsYesterday() {
-    this.stats.getResults(this.yesterday).subscribe(res => {
+  getResultsToday() {
+    this.stats.getResults(this.today).subscribe(res => {
       this.games2 = res;
-      this.showDateYesterday();
+      this.showDateToday();
     });
   }
 
   showDate() {
+    const date = new Date();
+    const dd = date.getDate() + 1;
+    const mm = date.getMonth() + 1; //January is 0!
+    const yyyy = date.getFullYear();
+    const tomorrow = yyyy + "-" + mm + "-" + dd;
+    this.date = tomorrow;
     this.dates = this.games.dates[0];
-    this.date = this.dates.date;
-    this.gamesToday = this.games.totalItems;
+    this.gamesTomorrow = this.games.totalItems;
     this.showResults();
   }
 
-  showDateYesterday() {
+  showDateToday() {
+    const date = new Date();
+    const dd = date.getDate();
+    const mm = date.getMonth() + 1; //January is 0!
+    const yyyy = date.getFullYear();
+    const today = yyyy + "-" + mm + "-" + dd;
+    this.date2 = today;
     this.dates2 = this.games2.dates[0];
-    this.date2 = this.dates2.date;
-    this.gamesYesterday = this.games2.totalItems;
-    this.showResultsYesterday();
+    this.gamesToday = this.games2.totalItems;
+    this.showResultsToday();
   }
 
   showResults() {
@@ -84,7 +94,7 @@ export class ResultsComponent implements OnInit {
     });
   }
 
-  showResultsYesterday() {
+  showResultsToday() {
     this.dates2.games.forEach(element => {
       this.teams2.push(element.teams);
     });

@@ -2,37 +2,7 @@
   <!-- GAMES TODAY -->
   <div class="date">
     <span class="games-amount">{{ gamesToday }}</span>
-    <span> games on {{ date }}</span>
-  </div>
-  <div class="titles">
-    <span class="title">
-      <h2 class="home-title">Home</h2>
-    </span>
-    <span class="title">
-      <h2 class="score-title">Score</h2>
-    </span>
-    <span class="title">
-      <h2 class="away-title">Away</h2>
-    </span>
-  </div>
-  <div class="results">
-    <div class="games-container">
-      <div class="game" *ngFor="let team of teams">
-        <p class="section team-name">{{ team.home.team.name }}</p>
-        <div class="score">
-          <p class="section team-score">{{ team.home.score }}</p>
-          <p class="section">-</p>
-          <p class="section team-score">{{ team.away.score }}</p>
-        </div>
-        <p class="section team-name">{{ team.away.team.name }}</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- GAMES YESTERDAY -->
-  <div class="date">
-    <span class="games-amount">{{ gamesYesterday }}</span>
-    <span> games on {{ date2 }}</span>
+    <span> games played today</span>
   </div>
   <div class="titles">
     <span class="title">
@@ -53,6 +23,36 @@
           <p class="section team-score">{{ team.home.score }}</p>
           <p class="section">-</p>
           <p class="section team-score">{{ team.away.score }}</p>
+        </div>
+        <p class="section team-name">{{ team.away.team.name }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAMES TOMORROW -->
+  <div class="date">
+    <span class="games-amount">{{ gamesTomorrow }}</span>
+    <span> games tomorrow</span>
+  </div>
+  <div class="titles">
+    <span class="title">
+      <h2 class="home-title">Home</h2>
+    </span>
+    <span class="title">
+      <h2 class="score-title">Score</h2>
+    </span>
+    <span class="title">
+      <h2 class="away-title">Away</h2>
+    </span>
+  </div>
+  <div class="results">
+    <div class="games-container">
+      <div class="game" *ngFor="let team of teams">
+        <p class="section team-name">{{ team.home.team.name }}</p>
+        <div class="score">
+          <!-- <p class="section team-score">{{ team.home.score }}</p> -->
+          <p class="section">-</p>
+          <!-- <p class="section team-score">{{ team.away.score }}</p> -->
         </div>
         <p class="section team-name">{{ team.away.team.name }}</p>
       </div>

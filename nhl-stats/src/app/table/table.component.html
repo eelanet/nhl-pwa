@@ -1,3 +1,25 @@
-<p>
-  table works!
-</p>
+<div class="container">
+  <h2>League Table</h2>
+  <div class="titles">
+    <h3 class="title rank-title">
+      Rank
+    </h3>
+    <h3 class="title name-title">
+      Team name
+    </h3>
+    <h3 class="title points-title">
+      Points
+    </h3>
+  </div>
+  <div class="table">
+    <div class="ranks">
+      <p class="col team-rank" *ngFor="let rank of ranks">{{ rank }}.</p>
+    </div>
+    <div class="names">
+      <p class="col team-name" *ngFor="let name of names">{{ name }}</p>
+    </div>
+    <div class="points">
+      <p class="col team-points" *ngFor="let points of points">{{ points }}</p>
+    </div>
+  </div>
+</div>

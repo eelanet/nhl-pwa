@@ -8,8 +8,6 @@ import { StatsService } from "../stats.service";
   styleUrls: ["./teams.component.css"]
 })
 export class TeamsComponent implements OnInit {
-  title = "All teams";
-  update = false;
   allTeams: any;
   teamNames = [];
 
@@ -30,6 +28,5 @@ export class TeamsComponent implements OnInit {
     this.allTeams.teams.forEach(element => {
       this.teamNames.push(element.name);
     });
-    console.log(this.teamNames);
   }
 }

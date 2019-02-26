@@ -16,4 +16,8 @@ export class StatsService {
       "https://statsapi.web.nhl.com/api/v1/schedule?date=" + date
     );
   }
+
+  getLeagueTable() {
+    return this.http.get("https://statsapi.web.nhl.com/api/v1/standings");
+  }
 }

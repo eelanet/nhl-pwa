@@ -16,13 +16,18 @@ import {
   MatToolbarModule
 } from "@angular/material";
 import { NavbarComponent } from "./navbar/navbar.component";
-import { TeamsComponent } from './teams/teams.component';
-import { ResultsComponent } from './results/results.component';
-import { GamesComponent } from './games/games.component';
-import { TableComponent } from './table/table.component';
+import { TeamsComponent } from "./teams/teams.component";
+import { ResultsComponent } from "./results/results.component";
+import { TableComponent } from "./table/table.component";
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, TeamsComponent, ResultsComponent, GamesComponent, TableComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    TeamsComponent,
+    ResultsComponent,
+    TableComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
