@@ -1,6 +1,6 @@
 {
-  "name": "NHL Stats",
-  "short_name": "Nhl stats",
+  "name": "NHL-Stats",
+  "short_name": "Nhl-stats",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
