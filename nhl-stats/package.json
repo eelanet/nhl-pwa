@@ -7,11 +7,14 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^7.2.6",
+    "@angular/cli": "~7.3.0",
+    "@angular/compiler-cli": "~7.2.0",
     "@angular/cdk": "^7.3.3",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
@@ -28,7 +31,8 @@
     "http-server": "^0.11.1",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "typescript": "~3.2.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
