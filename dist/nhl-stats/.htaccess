@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://nhl-pwa.herokuapp.com
