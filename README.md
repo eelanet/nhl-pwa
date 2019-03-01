@@ -1,2 +1,7 @@
-# nhl-pwa
-PWA web app for NHL stats.
+# NHL Stats App
+
+## Nhl stats PWA
+
+Simple web app for getting basic Nhl data from Nhl API.
+
+Made with Angular 7.
