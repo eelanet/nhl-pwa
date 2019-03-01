@@ -1,7 +1,7 @@
 {
-  "name": "NHL-Stats",
-  "short_name": "Nhl-stats",
-  "theme_color": "#1976d2",
+  "name": "NHL Stats App",
+  "short_name": "NHL Stats",
+  "theme_color": "#ddd2b7",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
