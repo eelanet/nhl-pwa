@@ -1,16 +1,20 @@
-.container {
-  width: 90%;
-  margin: auto;
+.content {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 10px;
 }
 
 .title {
-  margin: 40px 0;
+  padding: 40px 0;
+  margin: 0;
 }
 
 .team {
   font-size: 20px;
-  padding: 15px;
+  padding: 15px 0;
   text-align: center;
-  background: #f9f7f3;
-  margin: 7px 0;
+  background: #ddd2b7;
+  margin: 8px 0;
+  box-shadow: 2px 3px #7c7257;
+  border-radius: 10px;
 }
