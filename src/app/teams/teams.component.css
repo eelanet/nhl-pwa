@@ -1,20 +1,41 @@
 .content {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .title {
   padding: 40px 0;
   margin: 0;
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .team {
   font-size: 20px;
-  padding: 15px 0;
+  padding: 0;
   text-align: center;
   background: #ddd2b7;
-  margin: 8px 0;
+  margin: 10px 0;
   box-shadow: 2px 3px #7c7257;
   border-radius: 10px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.team:hover {
+  background: #ddd2b7ce;
+}
+
+.name {
+  padding: 20px;
+  margin: 0;
 }

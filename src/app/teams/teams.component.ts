@@ -11,7 +11,7 @@ export class TeamsComponent implements OnInit {
   allTeams: any;
   teamNames = [];
 
-  constructor(private stats: StatsService) {}
+  constructor(private stats: StatsService) { }
 
   ngOnInit() {
     this.getTeams();
@@ -26,7 +26,7 @@ export class TeamsComponent implements OnInit {
 
   getNames() {
     this.allTeams.teams.forEach(element => {
-      this.teamNames.push(element.name);
+      this.teamNames.push(element);
     });
   }
 }

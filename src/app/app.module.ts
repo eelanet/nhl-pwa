@@ -19,6 +19,7 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { TeamsComponent } from "./teams/teams.component";
 import { ResultsComponent } from "./results/results.component";
 import { TableComponent } from "./table/table.component";
+import { TeamInfoComponent } from './team-info/team-info.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TableComponent } from "./table/table.component";
     NavbarComponent,
     TeamsComponent,
     ResultsComponent,
-    TableComponent
+    TableComponent,
+    TeamInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -44,4 +46,4 @@ import { TableComponent } from "./table/table.component";
   providers: [StatsService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
