@@ -1,8 +1,9 @@
 <div class="container">
-  <!-- GAMES TODAY -->
+  <!-- GAMES YESTERDAY -->
   <div class="date">
-    <span class="games-amount">{{ gamesToday }}</span>
-    <span> games played today</span>
+    <p>{{ yesterday }} (US)</p>
+    <span class="games-amount">{{ gamesYesterday }}</span>
+    <span> games played yesterday</span>
   </div>
   <div class="titles">
     <span class="title">
@@ -29,10 +30,11 @@
     </div>
   </div>
 
-  <!-- GAMES TOMORROW -->
+  <!-- GAMES TODAY -->
   <div class="date">
-    <span class="games-amount">{{ gamesTomorrow }}</span>
-    <span> games tomorrow</span>
+    <p>{{ today }} (US)</p>
+    <span class="games-amount">{{ gamesToday }}</span>
+    <span> games today</span>
   </div>
   <div class="titles">
     <span class="title">

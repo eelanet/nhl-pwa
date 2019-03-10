@@ -11,7 +11,7 @@ import { Location } from '@angular/common';
 export class TeamInfoComponent implements OnInit {
   team: any;
   teamInfo: any;
-  roster: [];
+  roster: [] = [];
 
   constructor(
     private route: ActivatedRoute,
