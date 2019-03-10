@@ -1,7 +1,7 @@
 # NHL Stats App
 
-## Nhl stats PWA
+## Angular7 PWA
 
-Simple web app for getting basic Nhl data from Nhl API.
+Simple progressive web app for getting NHL data from NHL API.
 
-Made with Angular 7.
+Teams, Players, Games (today and tomorrow), League table.
