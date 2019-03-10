@@ -1,0 +1,55 @@
+.content {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.title {
+    margin: 0;
+    padding: 15px 0;
+}
+
+.players {
+    margin: 0;
+    padding: 0px 20px 20px 20px;
+    background: #c1ae7c;
+}
+
+h3 {
+    margin: 20px;
+    padding-top: 10px; 
+    text-align: center;
+}
+
+.player-info {
+    display: flex;
+    background: #F3F0E7;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+}
+
+.player-number {
+    margin: 0 5px;
+}
+
+.player-name {
+    text-align: center;
+    width: 98%;
+    margin: 0 auto;
+}
+
+.back {
+    width: 40%;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+.btn {
+    padding: 10px 0;
+    width: 100%;
+    color: #F3F0E7;
+    background: #222;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+}

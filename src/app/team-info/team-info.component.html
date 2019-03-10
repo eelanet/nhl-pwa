@@ -1,12 +1,17 @@
 <div class="container">
   <div class="content">
     <h2 class="title">{{ teamInfo.name }}</h2>
-    <h3>Players</h3>
     <ul class="players">
+      <li>
+        <h3>Players</h3>
+      </li>
       <li class="player-info" *ngFor="let player of roster">
-        <p class="player-number">{{ player.jerseyNumber }}</p>
-        <p class="player-number">{{ player.person.fullName }}</p>
+        <p class="player-number">#{{ player.jerseyNumber }}</p>
+        <p class="player-name">{{ player.person.fullName }}</p>
       </li>
     </ul>
+    <div class="back">
+      <button class="btn" (click)="goBack()">BACK</button>
+    </div>
   </div>
 </div>
